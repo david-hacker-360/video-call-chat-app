@@ -87,7 +87,7 @@ const scrollToBottom = () => {
 
 
 
-const muteUnmute = () => {
+const muteUNmute = () => {
   const enabled = myvideostream.getAudioTracks()[0].enabled;
   if (enabled) {
     myvideostream.getAudioTracks()[0].enabled = false;
@@ -103,7 +103,7 @@ const setMuteButton = () => {
       <i class="fas fa-microphone"></i>
       <span>Mute</span>
     `
-  document.querySelector('.main__mute_button').innerHTML = html;
+  document.querySelector('.main_mute_button').innerHTML = html;
 }
 
 const setUnmuteButton = () => {
@@ -111,12 +111,8 @@ const setUnmuteButton = () => {
       <i class="unmute fas fa-microphone-slash"></i>
       <span>Unmute</span>
     `
-  document.querySelector('.main__mute_button').innerHTML = html;
+  document.querySelector('.main_mute_button').innerHTML = html;
 }
-
-
-
-
 const playStop = () => {
   console.log('object')
   let enabled = myvideostream.getVideoTracks()[0].enabled;
@@ -133,7 +129,7 @@ const setStopVideo = () => {
       <i class="fas fa-video"></i>
       <span>Stop Video</span>
     `
-  document.querySelector('.main__video_button').innerHTML = html;
+  document.querySelector('.main_video_button').innerHTML = html;
 }
 
 const setPlayVideo = () => {
@@ -141,5 +137,5 @@ const setPlayVideo = () => {
     <i class="stop fas fa-video-slash"></i>
       <span>Play Video</span>
     `
-  document.querySelector('.main__video_button').innerHTML = html;
+  document.querySelector('.main_video_button').innerHTML = html;
 }

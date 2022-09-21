@@ -2,7 +2,6 @@ const express = require('express');
 const app = express();
 const server = require('http').Server(app);
 const io = require('socket.io')(server);
-const port = process.env.PORT||443;
 const {
     ExpressPeerServer
 } = require('peer');
@@ -38,7 +37,4 @@ io.on('connection', Socket => {
     
     })
 })
-
-app.listen(port,()=>{
-    console.log(`listing on this port ${port}`)
-})
+server.listen(process.env.PORT||3030)
